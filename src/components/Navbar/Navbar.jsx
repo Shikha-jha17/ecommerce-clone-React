@@ -3,13 +3,14 @@ import { IoMdSearch } from "react-icons/io";
 import { FaCartShopping } from "react-icons/fa6";
 import { FaCaretDown } from "react-icons/fa";
 import DarkMode from './DarkMode';
+import { Link } from 'react-router-dom';
 
 
 const MenuLinks = [
     {
         id: 1,
         name: "Home",
-        link: "/#",
+        link: "/",
     },
     {
         id: 2,
@@ -25,7 +26,8 @@ const MenuLinks = [
         id: 4,
         name: "Blogs",
         link: "/#blog",
-    }
+    },
+    
     
 
 ]
@@ -54,16 +56,16 @@ const DropdownLinks = [
 
 const Navbar = () => {
   return (
-    <div className='bg-white dark:bg-gray-900 dark:text-white duration-200 relative z-40'>
+    <nav className='bg-white dark:bg-gray-900 dark:text-white duration-200 relative z-40'>
         <div className="py-4">
             <div className="container flex justify-between items-center">
                 
                 {/*Logo and Links section*/}
                 <div className='flex items-center gap-4'>
-                    <a 
-                        href="#"
+                    <Link
+                        to="#"
                         className="font-semibold tracking-widest text-2xl uppercase sm:text-3xl">
-                        <span className='text-primary'>ESh</span>OP</a>
+                        <span className='text-primary'>ESh</span>OP</Link>
                         
 
                     
@@ -74,33 +76,33 @@ const Navbar = () => {
                                 {
                                     MenuLinks.map((data, index) => (
                                         <li key={index}>
-                                            <a href={data.link}
+                                            <Link to={data.link}
                                             className='inline-block px-4 font-semibold text-gray-500 hover:text-black dark:hover:text-white duration-200'
                                             >
                                                 {" "}
-                                                {data.name}</a>
+                                                {data.name}</Link>
                                         </li>
                                     ))
                                 }
                                 {/*Dropdown*/}
                                 <li className='relative cursor-pointer group'>
-                                    <a href="#" className='flex items-center gap-[2px] font-semibold text-gray-500 hover:text-black
+                                    <Link to="#" className='flex items-center gap-[2px] font-semibold text-gray-500 hover:text-black
                                      dark:hover:text-white py-2'>
                                         Quick Links
                                     <span>
                                         <FaCaretDown className="group-hover: rotate-100 duration-300"/>
                                     </span>
-                                    </a>
+                                    </Link>
                                     {/*Dropdown links*/}
                                     <div className='absolute z-[9999] hidden group-hover:block w-[200px] rounded-md bg-white shadow-md dark:bg-gray-900 p-2 dark:text-white'>
                                         <ul className='space-y-2'>
                                             {
                                                 DropdownLinks.map((data, index)=>(
                                                     <li>
-                                                        <a 
+                                                        <Link
                                                          className="text-gray-500 hover:text-black dark:hover:text-white duration-200 inline-block w-full p-2 
                                                          hover:bg-primary/20 rounded-md font-semibold"
-                                                         href={data.link}>{data.name}</a>
+                                                         to={data.link}>{data.name}</Link>
                                                     </li>
                                                 ))
                                             }
@@ -121,6 +123,13 @@ const Navbar = () => {
                         />
                         </div>       
                     
+                    {/*Sign in*/}
+                    <div>
+                    <Link to="/signin" className='flex items-center gap-[2px] font-semibold text-gray-500 hover:text-black
+                                     dark:hover:text-white py-2'>
+                                        Sign up
+                                    </Link>
+                    </div>
                     {/*Order button section*/}
                     <button className="relative p-3">
                         <FaCartShopping className="text-xl text-gray-600 dark:text-gray-400" />
@@ -138,7 +147,7 @@ const Navbar = () => {
             </div>
         </div>
         
-    </div>
+    </nav>
   )
 }
 

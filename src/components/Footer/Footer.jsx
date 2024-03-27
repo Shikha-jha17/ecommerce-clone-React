@@ -1,5 +1,6 @@
 import React from 'react'
 import Button from "../Shared/Button.jsx"
+import { Link } from 'react-router-dom'
 
 const FooterLinks = [
     {
@@ -75,22 +76,22 @@ const Footer = () => {
             <div className="grid md:grid-cols-3 pb-20 pt-5">
                 {/*company details*/}
                 <div className='py-8 px-4'>
-                    <a 
-                            href="#"
+                    <Link
+                            to="#"
                             className="font-semibold tracking-widest text-2xl uppercase sm:text-3xl">
                             <span className='text-primary'>ESH</span>OP
-                    </a>
+                    </Link>
                     <p className='text-gray-600 lg:pr-24 pt-3'>
                         Grab the best deals in wearable technology today!
                     </p>
                     <p className='text-gray-500 mt-4'> 
                         Follow for more on our Youtube Channel!
                     </p>
-                    <a 
-                    href="#" target="_blank" className='inline-block bg-primary/90 text-white py-2 px-4 mt-4
+                    <Link
+                    to="#" target="_blank" className='inline-block bg-primary/90 text-white py-2 px-4 mt-4
                     text-sm rounded-full'>
                     Visit Youtube channel
-                    </a>
+                    </Link>
                 </div>
                 
                     {/*FooterLinks*/}
@@ -103,13 +104,13 @@ const Footer = () => {
                             {
                               FooterLinks.map((data, index)=> (
                                 <li key={index}>
-                                    <a
-                                    href={data.link}
+                                    <Link
+                                    to={data.link}
                                     className='text-gray-600 hover:text-black duration-300'
                                     >
                                     {data.title}
 
-                                    </a>
+                                    </Link>
                                     
                                 </li>
                               ))
@@ -130,13 +131,13 @@ const Footer = () => {
                             {
                               MakeMoney.map((data, index)=> (
                                 <li key={index}>
-                                    <a
-                                    href={data.link}
+                                    <Link
+                                    to={data.link}
                                     className='text-gray-600 hover:text-black duration-300'
                                     >
                                     {data.title}
 
-                                    </a>
+                                    </Link>
                                     
                                 </li>
                               ))
@@ -156,13 +157,13 @@ const Footer = () => {
                                 {
                                 HelpYou.map((data, index)=> (
                                     <li key={index}>
-                                        <a
-                                        href={data.link}
+                                        <Link
+                                        to={data.link}
                                         className='text-gray-600 hover:text-black duration-300'
                                         >
                                         {data.title}
 
-                                        </a>
+                                        </Link>
                                         
                                     </li>
                                 ))

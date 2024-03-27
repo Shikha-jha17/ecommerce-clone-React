@@ -7,6 +7,13 @@ import "slick-carousel/slick/slick-theme.css";
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+   
+      <App />
+    
   </React.StrictMode>,
 )
+
+
+
+
+  
