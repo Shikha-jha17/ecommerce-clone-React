@@ -12,8 +12,8 @@ import Image_hp from "./components/headphone2.png"
 import Image_hp2 from "./assets/category/smartwatch2-removebg-preview.png"
 import Products from "./components/Products/Products.jsx"
 import Blogs from "./components/Blogs/Blogs.jsx"
-import SignIn from './components/SignIn.jsx'
-
+import SignIn from './components/Pages/SignIn.jsx'
+import Registration from './components/Pages/Registration.jsx'
 import Footer from "./components/Footer/Footer.jsx";
 
 import { BrowserRouter as Router, Routes, Route, Outlet } from 'react-router-dom';
@@ -76,6 +76,8 @@ const App = ()=> {
           <Routes>
               <Route path ="/" element={<Layout />} />
               <Route path="/signin" element={<SignIn />} />
+              <Route path="/registration" element={<Registration />} />
+              
               
           </Routes>
           

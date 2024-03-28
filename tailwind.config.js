@@ -17,6 +17,9 @@ export default {
 
 
       },
+      boxShadow: {
+        eshopInput: "0 0 3px 2px rgb(244,44,55 / 70%)",
+      },
       container:{
         center:true,
         padding:{
