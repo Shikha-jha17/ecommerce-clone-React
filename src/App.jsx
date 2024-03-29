@@ -15,6 +15,7 @@ import Blogs from "./components/Blogs/Blogs.jsx"
 import SignIn from './components/Pages/SignIn.jsx'
 import Registration from './components/Pages/Registration.jsx'
 import Footer from "./components/Footer/Footer.jsx";
+import Cart from './components/Pages/Cart.jsx'
 
 import { BrowserRouter as Router, Routes, Route, Outlet } from 'react-router-dom';
 
@@ -77,6 +78,7 @@ const App = ()=> {
               <Route path ="/" element={<Layout />} />
               <Route path="/signin" element={<SignIn />} />
               <Route path="/registration" element={<Registration />} />
+              <Route path="/cart" element={<Cart />} />
               
               
           </Routes>

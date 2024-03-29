@@ -9,9 +9,11 @@ const SignIn = () => {
     <div className='w-full'>
       <div className='w-full bg-gray-100 pb-10 pt-5'>
         <form className='w-[350px] mx-auto flex flex-col items-center'>
-          <div className="font-semibold tracking-widest text-3xl uppercase sm:text-4xl pb-5 ">
-           <span className='text-primary'>ESh</span>OP
-          </div>
+          <Link to="/">
+            <div className="font-semibold tracking-widest text-3xl uppercase sm:text-4xl pb-5 ">
+            <span className='text-primary'>ESh</span>OP
+            </div>
+          </Link>
           <div className='w-full border border-zinc-200 p-6'>
             <h2 className='font-title text-3xl font-medium mb-4'>Sign In</h2>
             <div className='flex flex-col gap-3'>
@@ -62,7 +64,7 @@ const SignIn = () => {
             </p>
             <p className='text-xs text-amber-600 hover:text-orange-700 hover:underline underline-offset-1 cursor-pointer duration-100'>
               Help
-            </p>git 
+            </p>
           </div>
           <p className='text-xs text-gray-600'>© 2024, Eshop.com, Inc. or its affiliates</p>
       </div>

@@ -8,7 +8,7 @@ import Img4 from "../../assets/product/p-4.jpg"
 import Img5 from "../../assets/product/p-5.jpg"
 import Img6 from "../../assets/product/p-7.jpg"
 import Img7 from "../../assets/product/p-9.jpg"
-
+import { useDispatch } from 'react-redux';
 
 const ProductsData =[
   {
@@ -75,6 +75,7 @@ const ProductsData2 =[
 ]
 
 const Products = () => {
+  
   return (
     <div className='container'>
         {/*Header Section*/}

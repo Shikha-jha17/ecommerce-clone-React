@@ -75,9 +75,12 @@ const Registration = () => {
     <div className='w-full'>
         <div className='w-full bg-gray-100 pb-10'>
             <form className='w-[350px] mx-auto flex flex-col items-center'>
-                <div className="font-semibold tracking-widest text-3xl uppercase sm:text-4xl pb-5 ">
-                <span className='text-primary'>ESh</span>OP
-                </div>
+                <Link to="/">
+                    <div className="font-semibold tracking-widest text-3xl uppercase sm:text-4xl pb-5 ">
+                    <span className='text-primary'>ESh</span>OP
+                    </div>
+                </Link>
+                
                 <div className='w-full border border-zinc-200 p-6'>
                     <h2 className='font-title text-3xl font-medium mb-4'>Create your account</h2>
                     <div className='flex flex-col gap-3'>
