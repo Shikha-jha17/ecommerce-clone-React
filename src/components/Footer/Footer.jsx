@@ -122,7 +122,7 @@ const Footer = () => {
                 
 
                     {/*Make Money With Us*/}
-                    <div className='col-span-2 grid grid-cols-2 sm:grid-cols-3 md:pl-10'>
+                    <div className='col-span-1 sm:col-span-2 flex justify-end'>
                     <div className='py-8 px-4'>
                         <h1 className='text-xl font-bold sm:text-left mb-3 pr-24'>
                             Make Money With Us
@@ -148,9 +148,9 @@ const Footer = () => {
                 
 
                     {/*Let us help you*/}
-                    <div className='col-span-2 grid grid-cols-2 pl-10 sm:grid-cols-3 md:pl-10'>
-                        <div className='py-8 px-4'>
-                            <h1 className='text-xl font-bold sm:text-left mb-3'>
+                    <div className='col-span-1 sm:col-span-2 flex justify-end'>
+                        <div className='py-8 px-4 '>
+                            <h1 className='text-xl font-bold sm:text-left mb-3 '>
                                 Let Us Help You
                             </h1>
                             <ul className='space-y-3'>

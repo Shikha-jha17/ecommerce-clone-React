@@ -16,6 +16,9 @@ import SignIn from './components/Pages/SignIn.jsx'
 import Registration from './components/Pages/Registration.jsx'
 import Footer from "./components/Footer/Footer.jsx";
 import Cart from './components/Pages/Cart.jsx'
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 import { BrowserRouter as Router, Routes, Route, Outlet } from 'react-router-dom';
 
@@ -64,6 +67,19 @@ const Layout =()=>{
 
 const App = ()=> {
 
+  React.useEffect(() => {
+    AOS.init(
+      {
+        duration: 800,
+        easing: "ease-in-sine",
+        delay: 100,
+        offset: 100,
+
+      }
+
+    );
+    AOS.refresh();
+  }, [])
     
       
     

@@ -12,6 +12,7 @@ const BlogData = [
         subtitle: "Look for a model that comes with an in-built Pedometer, Accelerometer, Heart Rate Monitor, etc. These features will help you measure and track activities like...",
         published: "July 20, 2023 by Shikha",
         image: Img1,
+        aosDelay: "0",
     },
 
     {
@@ -19,6 +20,7 @@ const BlogData = [
         subtitle: "Determine your needs: First, you need to determine your needs and what you want the gadget to do. For example, if you're looking for a laptop, ...",
         published: "July 27, 2023 by Shikha",
         image:Img2 ,
+        aosDelay: "200",
     },
 
     {
@@ -26,6 +28,7 @@ const BlogData = [
         subtitle: "You want to buy a Virtual Reality headset, but you do not know which one to choose? In this article, we will help you guide your choice for the purchase of ...",
         published: "Aug 3, 2023 by Shikha",
         image: Img3,
+        aosDelay: "400",
     },
 
 ]
@@ -40,7 +43,8 @@ const Blogs = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 gap-y-8 sm:gap-4 md:gap-7">
             {/*Blog card*/}
             {BlogData.map((data) => (
-                <div key={data.title} className='bg-white dark:bg-gray-900'>
+                <div data-aos="fade-up"
+                data-aos-delay={data.aosDelay} key={data.title} className='bg-white dark:bg-gray-900'>
                     {/*image section*/}
                     <div className='overflow-hidden rounded-2xl mb-2'>
                         <img src={data.image} alt=""
