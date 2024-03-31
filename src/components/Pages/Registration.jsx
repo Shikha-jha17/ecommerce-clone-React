@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { IoIosArrowDroprightCircle, IoMdArrowDroprightCircle } from "react-icons/io";
 import { Link } from 'react-router-dom'
+import Navbar from "../Navbar/Navbar.jsx"
 
 const Registration = () => {
 
@@ -73,8 +74,9 @@ const Registration = () => {
 }*/}
   return (
     <div className='w-full'>
-        <div className='w-full bg-gray-100 pb-10'>
-            <form className='w-[350px] mx-auto flex flex-col items-center'>
+        <Navbar />
+        <div className='w-full bg-gray-100 pb-10 '>
+            <form className='w-[350px] mx-auto flex flex-col items-center my-6'>
                 <Link to="/">
                     <div className="font-semibold tracking-widest text-3xl uppercase sm:text-4xl pb-5 ">
                     <span className='text-primary'>ESh</span>OP

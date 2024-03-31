@@ -5,6 +5,7 @@ import { useState } from 'react'
 import { useDispatch } from 'react-redux';
 import { deleteItem, resetCart, incrementQuantity, decrementQuantity } from "../redux/EshopSlice";
 import { Link } from 'react-router-dom'
+import Navbar from "../Navbar/Navbar.jsx"
 
 
 const Cart = () => {
@@ -22,18 +23,19 @@ const Cart = () => {
     return setTotalPrice(Total.toFixed(2));
     }, [products])
   return (
-    <div className='grid place-items-center mt-5'>
+    <div className='grid place-items-center mt-5 '>
+        <Navbar />
         <Link to="/">
                 <div className="font-semibold tracking-widest text-3xl uppercase sm:text-4xl pb-5 ">
                 <span className='text-primary'>ESh</span>OP
                 </div>
             </Link>
     
-    <div className="bg-white dark:bg-gray-900 dark:text-white duration-200 overflow-hidden">
+    <div className="bg-white dark:bg-gray-900 dark:text-white duration-200 overflow-hidden ">
       {products.length > 0 ? (
         <div className='container mx-auto h-auto grid grid-cols-5 gap-8'>
             
-            <div className='w-full bg-white h-full px-4 col-span-4'>
+            <div className='w-full bg-white h-full px-4 col-span-4 my-6'>
                 <div className='font-titleFont flex items-center justify-between border-b-[1px] border-b-gray-400'>
                     <h2 className='text-3xl font-medium'>Shopping Cart</h2>
                     <h4 className='text-xl font-medium'>Subtotal</h4>
@@ -81,7 +83,7 @@ const Cart = () => {
             
 
             </div>
-            <div className='w-full  bg-white h-52 col-span-1 flex flex-col justify-center items-center p-4'>
+            <div className='w-full  bg-white h-52 col-span-1 flex flex-col justify-center items-center p-4 my-2'>
                 <div>
                     <p className='flex gap-2 items-start text-sm'>
                         <span><FaCheckCircle className='bg-white text-green-500 rounded-full '/></span>
@@ -100,7 +102,7 @@ const Cart = () => {
             </div>
         </div> ) : (
         
-            <div >
+            <div className='flex flex-col items-center justify-center h-screen'>
                 <h2 className='text-gray-600 font-bold'>Oops....</h2>
                 <p>
                     Seems like your Shopping Cart is empty.

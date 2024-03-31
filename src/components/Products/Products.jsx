@@ -44,11 +44,8 @@ const ProductsData =[
     aosDelay: "600",
   },
 
-]
-
-const ProductsData2 =[
   {
-    id: 1,
+    id: 5,
     img: Img5, 
     title: "Boat Classic",
     description: "boAt Classic bluetooth headphones are designed to play Up to 16 hours. It has a High Definition Sound. Gives vintage feel with modern technology",
@@ -56,7 +53,7 @@ const ProductsData2 =[
     aosDelay: "0",
   }, 
   {
-    id: 2,
+    id: 6,
     img: Img6, 
     title: "Rocky Mountain",
     description: "boAt Rockerz bluetooth headphones are designed to play Up to 8 hours. It has a High Definition Sound. Don't just be loud, be loud and clear.",
@@ -64,7 +61,7 @@ const ProductsData2 =[
     aosDelay: "200",
   },
   {
-    id: 3,
+    id: 7,
     img: Img7, 
     title: "Sleek phones",
     description: "These bluetooth headphones won't give you a run for your money, but others run for your class.",
@@ -72,7 +69,7 @@ const ProductsData2 =[
     aosDelay: "400",
   },
   {
-    id: 4,
+    id: 8,
     img: Img4, 
     title: "Boat Rockerz 550",
     description: "boAt Rockerz bluetooth headphones are designed to play Up to 8 hours. It has a High Definition Sound. Don't just be loud, be loud and clear.",
@@ -82,6 +79,11 @@ const ProductsData2 =[
 
 ]
 
+
+  
+
+
+
 const Products = () => {
   
   return (
@@ -90,7 +92,7 @@ const Products = () => {
         <Heading title="Our Products" subtitle={"Explore Our Products"} />
         {/*Body Section*/}
         <ProductCard data={ProductsData} />
-        <ProductCard data={ProductsData2} />
+        
     </div>
   )
 }

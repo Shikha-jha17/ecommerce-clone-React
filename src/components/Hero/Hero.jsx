@@ -11,7 +11,7 @@ const HeroData = [
     {
         id: 1,
         img: Image1,
-        subtitle: "Beats Solo",
+        subtitle: "Buy latest",
         title: "Wireless",
         title2: "Headphone",
         aosDelay: "0",
@@ -20,16 +20,16 @@ const HeroData = [
     {
         id: 2,
         img: Image2,
-        subtitle: "Beats Solo",
+        subtitle: "Grab the best",
         title: "Wireless",
-        title2: "Virtual",
+        title2: "Gadgets",
         aosDelay: "200",
 
     },
     {
         id: 3,
         img: Image3,
-        subtitle: "Beats Solo",
+        subtitle: "Browse",
         title: "Branded",
         title2: "Laptops",
         aosDelay: "400",
@@ -102,12 +102,12 @@ const Hero = () => {
                                     data-aos-delay="300"
                                     
                                     >
-                                        <Button
+                                        {/*<Button
                                             text = "Shop By Category"
                                             bgColor = "bg-primary"
                                             textColor= "text-white"
                                         
-                                        />
+                />*/}
                                     </div>
                                 </div>
                                 {/*img section*/}

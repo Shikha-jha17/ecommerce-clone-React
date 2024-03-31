@@ -1,19 +1,21 @@
 import React from 'react'
 import { IoIosArrowDroprightCircle } from "react-icons/io";
 import { Link } from 'react-router-dom'
-import Registration from './Registration';
-
+import Registration from './Registration'
+import Navbar from "../Navbar/Navbar.jsx"
 
 const SignIn = () => {
   return (
     <div className='w-full'>
+      <Navbar />
       <div className='w-full bg-gray-100 pb-10 pt-5'>
-        <form className='w-[350px] mx-auto flex flex-col items-center'>
-          <Link to="/">
-            <div className="font-semibold tracking-widest text-3xl uppercase sm:text-4xl pb-5 ">
-            <span className='text-primary'>ESh</span>OP
-            </div>
-          </Link>
+        <form className='w-[350px] mx-auto flex flex-col items-center my-4'>
+                <Link to="/">
+                    <div className="font-semibold tracking-widest text-3xl uppercase sm:text-4xl pb-5 ">
+                    <span className='text-primary'>ESh</span>OP
+                    </div>
+                </Link>
+          
           <div className='w-full border border-zinc-200 p-6'>
             <h2 className='font-title text-3xl font-medium mb-4'>Sign In</h2>
             <div className='flex flex-col gap-3'>

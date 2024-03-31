@@ -17,18 +17,18 @@ const MenuLinks = [
     },
     {
         id: 2,
-        name: "Shop",
-        link: "/#shop",
+        name: "Categories",
+        link: "/#",
     },
     {
         id: 3,
-        name: "About",
-        link: "/#about",
+        name: "Gift with Us",
+        link: "/#",
     },
     {
         id: 4,
-        name: "Blogs",
-        link: "/#blog",
+        name: "Corporate Orders",
+        link: "/#",
     },
     
     
@@ -54,6 +54,8 @@ const DropdownLinks = [
         link: "/#",
     }
 ]
+
+
 
 
 

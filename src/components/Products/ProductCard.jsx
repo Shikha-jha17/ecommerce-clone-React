@@ -1,9 +1,7 @@
 import React from 'react'
-import Button from '../Shared/Button'
+
 import { useDispatch } from 'react-redux';
 import { addToCart } from "../redux/EshopSlice";
-import PopUpMessage from "../Pages/PopUpMessage";
-import { useState } from 'react';
 
 const ProductCard = ({data}) => {
   const dispatch = useDispatch();
