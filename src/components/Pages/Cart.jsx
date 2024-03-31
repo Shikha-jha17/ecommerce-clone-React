@@ -16,8 +16,10 @@ const Cart = () => {
         let Total = 0;
         products.map((data)=>{
             Total += data.price * data.quantity;
-            return setTotalPrice(Total.toFixed(2))
-    })
+            return Total;
+            
+    });
+    return setTotalPrice(Total.toFixed(2));
     }, [products])
   return (
     <div className='grid place-items-center mt-5'>
@@ -28,6 +30,7 @@ const Cart = () => {
             </Link>
     
     <div className="bg-white dark:bg-gray-900 dark:text-white duration-200 overflow-hidden">
+      {products.length > 0 ? (
         <div className='container mx-auto h-auto grid grid-cols-5 gap-8'>
             
             <div className='w-full bg-white h-full px-4 col-span-4'>
@@ -94,9 +97,21 @@ const Cart = () => {
 
 
             </div>
-        </div>
+        </div> ) : (
+        
+            <div >
+                <h2 className='text-gray-600 font-bold'>Oops....</h2>
+                <p>
+                    Seems like your Shopping Cart is empty.
+                    To buy one or more items, click on Add to Cart or <Link to="/"><span className='text-amber-600 group-hover:text-orange-700 group-hover:underline underline-offset-1'>Continue Shopping</span></Link>. 
+                </p> 
+            </div>
 
-    </div>
+)}
+
+    </div> 
+ 
+     
     </div>
   )
 }
