@@ -88,7 +88,7 @@ const Registration = () => {
                     <div className='flex flex-col gap-3'>
                         <div  className="flex flex-col gap-2">
                             <p className='text-sm font-medium'>Enter name</p>
-                            <input onClick={handleName} className="w-full py-1 border border-zinc-400 px-2 text-base rounded-sm outline-none 
+                            <input onClick={handleName} className="w-full py-1 border border-zinc-400 px-2 text-black rounded-sm outline-none 
                             focus-within:border-[#f42c37] focus-within:shadow-eshopInput duration-100"type="text"/>
                             {/*{
                                 errClientName && (
@@ -101,7 +101,7 @@ const Registration = () => {
                         </div>
                         <div className="flex flex-col gap-2">
                             <p className='text-sm font-medium'>Email or phone number</p>
-                            <input onClick={handleEmail} className="w-full lowercase py-1 border border-zinc-400 px-2 text-base rounded-sm outline-none 
+                            <input onClick={handleEmail} className="w-full lowercase py-1 border border-zinc-400 px-2 text-black rounded-sm outline-none 
                             focus-within:border-[#f42c37] focus-within:shadow-eshopInput duration-100" type="email"/>
                             {/*{
                                 errEmail && (
@@ -111,7 +111,7 @@ const Registration = () => {
                         </div>
                         <div className="flex flex-col gap-2">
                             <p className='text-sm font-medium'>Create password</p>
-                            <input  onClick={handlePassword}className="w-full py-1 border border-zinc-400 px-2 text-base rounded-sm outline-none 
+                            <input  onClick={handlePassword}className="w-full py-1 border border-zinc-400 px-2 dark: rounded-sm outline-none text-black 
                             focus-within:border-[#f42c37] focus-within:shadow-eshopInput duration-100" type="password"/>
                             {/*{
                                 errPassword && (
@@ -121,7 +121,7 @@ const Registration = () => {
                         </div>
                         <div className="flex flex-col gap-2">
                             <p className='text-sm font-medium'>Re-enter password</p>
-                            <input  onClick={handleCPassword} className="w-full lowercase py-1 border border-zinc-400 px-2 text-base rounded-sm outline-none 
+                            <input  onClick={handleCPassword} className="w-full lowercase py-1 border border-zinc-400 px-2 text-base rounded-sm outline-none text-black
                             focus-within:border-[#f42c37] focus-within:shadow-eshopInput duration-100" type="password"/>
                             {/*{
                                 errCPassword && (
