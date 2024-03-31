@@ -43,13 +43,14 @@ const Cart = () => {
                     {
                         products.map((data)=>(
                             <div key={data.id} className='w-full border-b-gray-300 p-4 flex items-center gap-6  '>
-                                <div className='w-full flex items-center gap-6 border-b-gray-400 border-b-[1px] '>
+                                <div className='w-full flex items-center justify-between gap-6 border-b-gray-400 border-b-[1px] '>
                                 <div className='w-1/5 '>
                                     <img className="w-full h-44 object-contain" src={data.img} alt="ProductImg" />
                                 </div>
-                                <div>
+                                <div className='w-3/5'> 
                                     <h2 className='font-semibold text-lg'>{data.title}</h2>
-                                    <p className='text-base'>Unit price <span className='font-semibold'>${data.price}</span></p>
+                                    <p className=' xl:pr-10 text-gray-600 text-sm'>{data.description}</p>
+                                    <p className='text-base'>Unit price: <span className='font-semibold'>${data.price}</span></p>
                                     <div className='bg-primary flex justify-center items-center gap-1 w-24 py-1 text-center drop-shadow-lg rounded-md'>
                                         <p >Qty:</p>
                                         <p onClick={()=>dispatch(decrementQuantity(data.id))}className='cursor-pointer px-1 rounded-md hover:bg-white duration-300'>-</p>
@@ -60,7 +61,7 @@ const Cart = () => {
                                         Delete item
                                     </button>
                                 </div>
-                                <div className="ml-auto">
+                                <div className="ml-auto w-1/5">
                                   <p className='text-lg font-titleFont font-semibold'>${data.price * data.quantity}</p>  
                                 </div>
                                 </div>

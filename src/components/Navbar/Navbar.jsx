@@ -5,6 +5,7 @@ import { FaCaretDown } from "react-icons/fa";
 import DarkMode from './DarkMode';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux'
+import { useState, useEffect } from 'react'
 
 
 
@@ -59,9 +60,13 @@ const DropdownLinks = [
 const Navbar = () => {
     const products = useSelector(state=>state.EshopReducer.products);
     
+
+   
+    
   return (
-    <nav className='bg-white dark:bg-gray-900 dark:text-white duration-200 relative z-40'>
-        <div className="py-4">
+    <div className='bg-white dark:bg-gray-900 dark:text-white duration-200 fixed top-0 w-full z-50 border-b-2 border-slate-400'>
+        <nav className='py-4'>
+        
             <div className="container flex justify-between items-center">
                 
                 {/*Logo and Links section*/}
@@ -154,9 +159,11 @@ const Navbar = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        
         
     </nav>
+    </div>
+    
   )
 }
 

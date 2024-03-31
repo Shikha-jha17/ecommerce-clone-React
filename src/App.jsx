@@ -28,10 +28,10 @@ import { BrowserRouter as Router, Routes, Route, Outlet } from 'react-router-dom
 const BannerData = {
   discount: "30% OFF",
   title: "Fine Smile",
-  date: "10 Jan to 28 Jan",
+  date: "10 April to 28 April",
   image: Image_hp,
   title2: "Air Solo Bass",
-  title3: "Winter Sale",
+  title3: "Summer Sale",
   bgColor: "#f42c37", 
 
 };
@@ -39,10 +39,10 @@ const BannerData = {
 const BannerData2 = {
   discount: "30% OFF",
   title: "Happy Hours",
-  date: "14 Jan to 28 Jan",
+  date: "14 April to 28 April",
   image: Image_hp2,
   title2: "Smart Solo",
-  title3: "Winter Sale",
+  title3: "Summer Sale",
   bgColor: "#2dcc6f", 
 
 };

@@ -2,10 +2,14 @@ import React from 'react'
 import Button from '../Shared/Button'
 import { useDispatch } from 'react-redux';
 import { addToCart } from "../redux/EshopSlice";
+import PopUpMessage from "../Pages/PopUpMessage";
+import { useState } from 'react';
 
 const ProductCard = ({data}) => {
   const dispatch = useDispatch();
- 
+
+  
+
   return (
     <div className='mb-10'>
         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5 place-items-center'>
@@ -26,11 +30,11 @@ const ProductCard = ({data}) => {
                       id:data.id,
                       img:data.img,
                       title: data.title,
+                      description: data.description,
                       price: data.price,
                       quantity: 1
                     }
-                     
-                      
+
                     ))}
                     className='bg-primary text-white cursor-pointer
     hover:scale-105 duration-300 py-2 px-8 rounded-full relative z-10 '>
@@ -57,7 +61,7 @@ const ProductCard = ({data}) => {
         
             
         </div>
-        
+          
         
     </div>
   )
