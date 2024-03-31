@@ -1,3 +1,5 @@
+https://eshop-clone-react.vercel.app/  (deployed)
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
