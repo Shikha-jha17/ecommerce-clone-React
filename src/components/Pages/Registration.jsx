@@ -75,10 +75,10 @@ const Registration = () => {
   return (
     <div className='w-full'>
         <Navbar />
-        <div className='w-full bg-gray-100 pb-10 '>
+        <div className='w-full bg-gray-100 dark:bg-gray-900 pb-10 '>
             <form className='w-[350px] mx-auto flex flex-col items-center my-6'>
                 <Link to="/">
-                    <div className="font-semibold tracking-widest text-3xl uppercase sm:text-4xl pb-5 ">
+                    <div className="font-semibold tracking-widest text-3xl uppercase sm:text-4xl pb-5  ">
                     <span className='text-primary'>ESh</span>OP
                     </div>
                 </Link>
@@ -128,7 +128,7 @@ const Registration = () => {
                                     <p className='text-red-600 text-sm font-semibold tracking-wide flex items-center gap-2 -m-1.5 '> <span className='italic font-titleFont font-extrabold text-base'>!</span> {errCPassword}</p>
                                 )
                             }*/}
-                            <p className='text-xs text-gray-600'>Password must be atleast 6 characters</p>
+                            <p className='text-xs text-gray-600 dark:text-white'>Password must be atleast 6 characters</p>
                         </div>
                         <div className="flex flex-col gap-2">
                         <button onClick={handleRegistration} 
@@ -137,7 +137,7 @@ const Registration = () => {
                             Continue
                         </button>
                         </div>
-                        <p className='text-sm text-black leading-4 mt-4'>By continuing, you agree to ESHOP's <span className='text-amber-600 cursor-pointer '  >Conditions of Use</span> and <span className='text-amber-600 cursor-pointer '>Privacy Notice.</span> </p>
+                        <p className='text-sm text-black dark:text-white leading-4 mt-4'>By continuing, you agree to ESHOP's <span className='text-amber-600 cursor-pointer '  >Conditions of Use</span> and <span className='text-amber-600 cursor-pointer '>Privacy Notice.</span> </p>
                     </div>
                     <div>
                         <Link to="/signin">
@@ -151,7 +151,7 @@ const Registration = () => {
                 
             </form>
         </div>
-        <div className='w-full bg-gradient-to-t from-white via-white to-zinc-200 flex flex-col gap-4 items-center justify-center py-10'>
+        <div className='w-full bg-white dark:bg-gray-900 flex flex-col gap-4 items-center justify-center py-10'>
           <div className='flex items-center gap-6'>
             <p className='text-xs text-amber-600 hover:text-orange-700 hover:underline underline-offset-1 cursor-pointer duration-100 '>
               Conditions of Use

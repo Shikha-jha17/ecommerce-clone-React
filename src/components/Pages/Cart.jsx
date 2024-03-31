@@ -35,13 +35,13 @@ const Cart = () => {
       {products.length > 0 ? (
         <div className='container mx-auto h-auto grid grid-cols-5 gap-8'>
             
-            <div className='w-full bg-white h-full px-4 col-span-4 my-6'>
+            <div className='w-full bg-white dark:bg-gray-900 h-full px-4 col-span-4 my-6'>
                 <div className='font-titleFont flex items-center justify-between border-b-[1px] border-b-gray-400'>
                     <h2 className='text-3xl font-medium'>Shopping Cart</h2>
                     <h4 className='text-xl font-medium'>Subtotal</h4>
                 </div>
                 {/*Products start here*/}
-                <div >
+                <div className=''>
                     {
                         products.map((data)=>(
                             <div key={data.id} className='w-full border-b-gray-300 p-4 flex items-center gap-6  '>
@@ -51,7 +51,7 @@ const Cart = () => {
                                 </div>
                                 <div className='w-3/5'> 
                                     <h2 className='font-semibold text-lg'>{data.title}</h2>
-                                    <p className=' xl:pr-10 text-gray-600 text-sm'>{data.description}</p>
+                                    <p className=' xl:pr-10 text-gray-600 dark:text-gray-400 text-sm'>{data.description}</p>
                                     <p className='text-base'>Unit price: <span className='font-semibold'>${data.price}</span></p>
                                     <div className='bg-primary flex justify-center items-center gap-1 w-24 py-1 text-center drop-shadow-lg rounded-md'>
                                         <p >Qty:</p>
@@ -83,7 +83,7 @@ const Cart = () => {
             
 
             </div>
-            <div className='w-full  bg-white h-52 col-span-1 flex flex-col justify-center items-center p-4 my-2'>
+            <div className='w-full  bg-white dark:bg-gray-900 h-52 col-span-1 flex flex-col justify-center items-center p-4 my-2'>
                 <div>
                     <p className='flex gap-2 items-start text-sm'>
                         <span><FaCheckCircle className='bg-white text-green-500 rounded-full '/></span>

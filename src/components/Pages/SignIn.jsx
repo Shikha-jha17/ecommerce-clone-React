@@ -8,7 +8,7 @@ const SignIn = () => {
   return (
     <div className='w-full'>
       <Navbar />
-      <div className='w-full bg-gray-100 pb-10 pt-5'>
+      <div className='w-full bg-gray-100 dark:bg-gray-900 dark:text-white border-b-2 border-slate-500 pb-10 pt-5'>
         <form className='w-[350px] mx-auto flex flex-col items-center my-4'>
                 <Link to="/">
                     <div className="font-semibold tracking-widest text-3xl uppercase sm:text-4xl pb-5 ">
@@ -36,7 +36,7 @@ const SignIn = () => {
                   </button>
               </div>
               <div>
-                <p className='text-sm text-black leading-4 mt-4'>By continuing, you agree to ESHOP's <span className='text-amber-600 cursor-pointer '  >Conditions of Use</span> and <span className='text-amber-600 cursor-pointer '>Privacy Notice.</span> </p>
+                <p className='text-sm text-black dark:text-white leading-4 mt-4'>By continuing, you agree to ESHOP's <span className='text-amber-600 cursor-pointer '  >Conditions of Use</span> and <span className='text-amber-600 cursor-pointer '>Privacy Notice.</span> </p>
                 <p className='text-xs text-gray-600 mt-4 cursor-pointer group inline-flex space-x-2 items-center'><IoIosArrowDroprightCircle /><span className='text-amber-600 group-hover:text-orange-700 group-hover:underline underline-offset-1'>Need help?</span></p>
                 
               </div>
@@ -56,8 +56,8 @@ const SignIn = () => {
           </Link>
         </form>
       </div>
-      <div className='w-full bg-gradient-to-t from-white via-white to-zinc-200 flex flex-col gap-4 items-center justify-center py-10'>
-          <div className='flex items-center gap-6'>
+      <div className='w-full bg-gradient-to-t  bg-white dark:bg-gray-900  flex flex-col gap-4 items-center justify-center py-10'>
+          <div className='flex items-center gap-6 '>
             <p className='text-xs text-amber-600 hover:text-orange-700 hover:underline underline-offset-1 cursor-pointer duration-100 '>
               Conditions of Use
             </p>
