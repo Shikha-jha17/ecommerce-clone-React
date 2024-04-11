@@ -15,13 +15,14 @@ import Blogs from "./components/Blogs/Blogs.jsx"
 import SignIn from './components/Pages/SignIn.jsx'
 import Registration from './components/Pages/Registration.jsx'
 import Footer from "./components/Footer/Footer.jsx";
-import Cart from './components/Pages/Cart.jsx'
+//import Cart from './components/Pages/Cart.jsx'
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
-import { productsData } from "./components/Products/api.jsx"
+//import { ProductApi } from "./components/Products/ProductApi.jsx"
 import { BrowserRouter as Router, Routes, Route, Outlet } from 'react-router-dom';
-
+import { DataProvider } from "./components/GlobalState.jsx"
+import ProductDetails from "./components/Products/ProductDetails.jsx"
 
 
 
@@ -86,15 +87,20 @@ const App = ()=> {
 
   return(
 
-    
+      <DataProvider>
+
+     
       <Router>
         <div className="bg-white dark:bg-gray-900 dark:text-white duration-200 overflow-hidden">
         
           <Routes>
-              <Route path ="/" element={<Layout />} loader={() => productsData()}/>
+              <Route path ="/" element={<Layout />} />
+              <Route path="/" element={<Products />} />
               <Route path="/signin" element={<SignIn />} />
               <Route path="/registration" element={<Registration />} />
-              <Route path="/cart" element={<Cart />} />
+              {/*<Route path="/cart" element={<Cart />} />*/}
+              <Route path="/products/:productId" element={<ProductDetails />} />
+              
               
               
           </Routes>
@@ -108,6 +114,7 @@ const App = ()=> {
             
         </div>
         </Router>
+        </DataProvider>
         
       
       

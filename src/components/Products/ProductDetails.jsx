@@ -1,30 +1,32 @@
-import React from 'react'
-import { useContext } from 'react'
-import { GlobalState } from '../GlobalState.jsx'
-//import  products  from '../Products/ProductApi.jsx'
-//import ProductList from '../Products/ProductUtils/ProductList.jsx'
-import Stars from '../Products/Stars.jsx'
-import { Link } from 'react-router-dom'
+import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import axios from 'axios';
 
+const ProductDetails = () => {
+  const { productId } = useParams();
+  const [product, setProduct] = useState([]);
 
-const Products = () => {
-  const { products } = useContext(GlobalState);
+  useEffect(() => {
+    const fetchProduct = async () => {
+      try {
+        const response = await axios.get(`https://fakestoreapi.com/products/${productId}`);
+        setProduct(response.data.productId);
+        console.log(response.data);
+      } catch (error) {
+        console.error('Error fetching product:', error);
+      }
+    };
 
-  //const products = state.ProductApi.products;
-  //const products = Products ? Products.products : [];
+    fetchProduct();
+  }, [productId]);
 
-  //console.log('Products:', products);
-  //const [ products ] = state;
+  if (!product) {
+    return <div>Loading...</div>;
+  }
 
-  //const products = state;
-
-  //console.log(state)
-  //console.log(products);
   return (
-    <div className='container'>
-        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5 place-items-center mx-auto '>
-            {/*card section*/}
-            {products.map((product) => (
+    <div className='product-details'>
+      {product.map((product) => (
                 <div className="group " key={product.id}
                 product-aos="fade-up"
                   product-aos-delay={product.aosDelay}>
@@ -74,10 +76,8 @@ const Products = () => {
         
             
         </div>
-          
-        
-    </div>
-  )
-}
 
-export default Products
+  );
+};
+
+export default ProductDetails;

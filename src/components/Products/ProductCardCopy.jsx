@@ -69,3 +69,4 @@ const dispatch = useDispatch();
 }
 
 export default ProductCard
+
